@@ -1,20 +1,23 @@
-from srcPY.person.Student import Student
-from srcPY.institution.University import University
 
-class Internship():
+class Internship:
 
-    def __init__(self,name):
+    def __init__(self, name):
         self.name = name
+        self.list_of_internships = ""
+        self.avg = 0.0
 
-    def getStudents(self,University):
-        counter=0
-        for Student in University.S:
-            counter += Student.knowledge
+    def get_students(self, university):
 
-        avg=counter/len(University.S)
+        sum_counter = 0
 
-        for Student in University.S:
-            if(Student.knowledge>avg):
-                 print(Student.name)
+        for student in university.studentsList:
+            sum_counter += student.knowledge
 
+        self.avg = sum_counter/len(university.studentsList)
+
+        for student in university.studentsList:
+            if(student.knowledge > self.avg):
+                self.list_of_internships += student.name+"\n"
+
+        return self.list_of_internships
 

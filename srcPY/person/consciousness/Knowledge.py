@@ -1,8 +1,8 @@
 
 
-class Knowledge():
-    def __init__(self,level):
-        self.level=level
+class Knowledge:
+    def __init__(self, level):
+        self.level = level
 
 
 
