@@ -1,4 +1,4 @@
-from srcPY.person.consciousness.Knowledge import Knowledge
+from srcPY.person.consciousness.knowledge import Knowledge
 from random import randint
 
 
